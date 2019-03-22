@@ -24,18 +24,15 @@ namespace csharp_example
         }
 
         [Test]
-        public void AllItemsLeftMenu()
+        public void AllStikers()
         {
             driver.Url = "http://localhost/litecart";
-            wait.Until(ExpectedConditions.TitleIs("My Store | Online Store"));
+            wait.Until(ExpectedConditions.TitleIs("Online Store | My Store"));
 
-            IWebElement Tab = wait.Until(ExpectedConditions.ElementExists(By.ClassName("tab-content")));
+            IWebElement Tab = wait.Until(ExpectedConditions.ElementExists(By.ClassName("middle")));
             IList<IWebElement> ListImages = Tab.FindElements(By.ClassName("image-wrapper"));
             int size_ = ListImages.Count;
-           // ListItems[0].Click();
-            //UlMain = wait.Until(ExpectedConditions.ElementExists(By.Id("box-apps-menu")));
-            //ListItems = UlMain.FindElements(By.CssSelector("#box-apps-menu>li"));
-            //IWebElement Main = wait.Until(ExpectedConditions.ElementExists(By.Id("main")));
+
             for (int i = 0; i < size_; i++)
             {
                 Assert.IsTrue(ListImages[i].FindElements(By.ClassName("sticker")).Count > 0);               

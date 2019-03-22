@@ -15,3 +15,4 @@ c:\users\littlewolf.personal\documents\visual studio 2015\Projects\UnitTestTask8
 c:\users\littlewolf.personal\documents\visual studio 2015\Projects\UnitTestTask8\UnitTestTask8\bin\Debug\ru\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
 c:\users\littlewolf.personal\documents\visual studio 2015\Projects\UnitTestTask8\UnitTestTask8\obj\Debug\UnitTestTask8.dll
 c:\users\littlewolf.personal\documents\visual studio 2015\Projects\UnitTestTask8\UnitTestTask8\obj\Debug\UnitTestTask8.pdb
+C:\Users\littlewolf.PERSONAL\documents\visual studio 2015\Projects\UnitTestTask8\UnitTestTask8\obj\Debug\UnitTestTask8.csprojResolveAssemblyReference.cache

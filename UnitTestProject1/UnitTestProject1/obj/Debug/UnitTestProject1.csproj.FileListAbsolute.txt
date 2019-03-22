@@ -12,3 +12,7 @@ c:\users\littlewolf.personal\documents\visual studio 2015\Projects\UnitTestProje
 c:\users\littlewolf.personal\documents\visual studio 2015\Projects\UnitTestProject1\UnitTestProject1\obj\Debug\UnitTestProject1.dll
 c:\users\littlewolf.personal\documents\visual studio 2015\Projects\UnitTestProject1\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
 C:\Users\littlewolf.PERSONAL\documents\visual studio 2015\Projects\UnitTestProject1\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache
+C:\Users\littlewolf.PERSONAL\documents\visual studio 2015\Projects\UnitTestProject1\UnitTestProject1\bin\Debug\NUnit3.TestAdapter.dll
+C:\Users\littlewolf.PERSONAL\documents\visual studio 2015\Projects\UnitTestProject1\UnitTestProject1\bin\Debug\NUnit3.TestAdapter.pdb
+C:\Users\littlewolf.PERSONAL\documents\visual studio 2015\Projects\UnitTestProject1\UnitTestProject1\bin\Debug\nunit.engine.dll
+C:\Users\littlewolf.PERSONAL\documents\visual studio 2015\Projects\UnitTestProject1\UnitTestProject1\bin\Debug\nunit.engine.api.dll

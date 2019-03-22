@@ -26,11 +26,12 @@ namespace csharp_example
         [Test]
         public void AllItemsLeftMenu()
         {
+
             driver.Url = "http://localhost/litecart/admin/login.php";
             driver.FindElement(By.Name("username")).SendKeys("admin");
             driver.FindElement(By.Name("password")).SendKeys("admin");
-            driver.FindElement(By.CssSelector("button.btn")).Click();
-             wait.Until(ExpectedConditions.TitleIs("My Store"));
+            driver.FindElement(By.Name("login")).Click();
+            wait.Until(ExpectedConditions.TitleIs("My Store"));
 
             IWebElement UlMain = wait.Until(ExpectedConditions.ElementExists(By.Id("box-apps-menu")));
             IList<IWebElement> ListItems = UlMain.FindElements(By.TagName("li"));
@@ -38,11 +39,10 @@ namespace csharp_example
             ListItems[0].Click();
             UlMain = wait.Until(ExpectedConditions.ElementExists(By.Id("box-apps-menu")));
             ListItems = UlMain.FindElements(By.CssSelector("#box-apps-menu>li"));
-            IWebElement Main = wait.Until(ExpectedConditions.ElementExists(By.Id("main")));
+            IWebElement Main = wait.Until(ExpectedConditions.ElementExists(By.Id("content")));
             for (int i = 0; i < size_; i++)
             {
                 Assert.True(Main.FindElements(By.TagName("h1")).Count > 0);
-                
                 if (ListItems[i].FindElements(By.TagName("ul")).Count > 0)
                 {
                     IList<IWebElement> ListItemsNested = ListItems[i].FindElement(By.TagName("ul")).FindElements(By.TagName("li"));
@@ -51,11 +51,10 @@ namespace csharp_example
                     UlMain = wait.Until(ExpectedConditions.ElementExists(By.Id("box-apps-menu")));
                     ListItems = UlMain.FindElements(By.CssSelector("#box-apps-menu>li"));
                     ListItemsNested = ListItems[i].FindElement(By.TagName("ul")).FindElements(By.TagName("li"));
-                    IWebElement MainNested = wait.Until(ExpectedConditions.ElementExists(By.Id("main")));
+                    IWebElement MainNested = wait.Until(ExpectedConditions.ElementExists(By.Id("content")));
                     for (int j = 0; j < NestedSize_; j++)
                     {
                         Assert.True(MainNested.FindElements(By.TagName("h1")).Count > 0);
-
                         if (j < (NestedSize_ - 1))
                         {
                             ListItemsNested[j + 1].Click();
@@ -67,11 +66,12 @@ namespace csharp_example
                         UlMain = wait.Until(ExpectedConditions.ElementExists(By.Id("box-apps-menu")));
                         ListItems = UlMain.FindElements(By.CssSelector("#box-apps-menu>li"));
                         ListItemsNested = ListItems[i].FindElement(By.TagName("ul")).FindElements(By.TagName("li"));
-                        MainNested = wait.Until(ExpectedConditions.ElementExists(By.Id("main")));
+                        MainNested = wait.Until(ExpectedConditions.ElementExists(By.Id("content")));
 
                     }
                 }
 
+                //ListItems[i + 1].FindElement(By.TagName("a")).Click();
                 if (i < (size_ - 1))
                 {
                     ListItems[i + 1].Click();
@@ -81,13 +81,12 @@ namespace csharp_example
                     continue;
                 }
                 UlMain = wait.Until(ExpectedConditions.ElementExists(By.Id("box-apps-menu")));
-                Main = wait.Until(ExpectedConditions.ElementExists(By.Id("main")));
+                Main = wait.Until(ExpectedConditions.ElementExists(By.Id("content")));
                 ListItems = UlMain.FindElements(By.CssSelector("#box-apps-menu>li"));
-
+                //ListItems = UlMain.FindElements(By.TagName("li"));
 
             }
-
-
+            
         }
 
     

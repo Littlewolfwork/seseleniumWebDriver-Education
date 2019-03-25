@@ -24,7 +24,7 @@ namespace csharp_example
         }
 
         [Test]
-        public void AllItemsLeftMenu()
+        public void AllCountriesOrder()
         {
             driver.Url = "http://localhost/litecart/admin/login.php";
             driver.FindElement(By.Name("username")).SendKeys("admin");
@@ -57,13 +57,7 @@ namespace csharp_example
                     continue;
                 }
                 CurrentStr = ListTr[i].FindElement(By.CssSelector("td:nth-child(5)")).Text;
-                if (String.Compare(CurrentStr, TempStr) > 0)
-                {
-                    Console.WriteLine("No alphabet");
-                    break;
-                }
-
-
+                Assert.True(String.Compare(CurrentStr, TempStr) <= 0);
             }
 
 
@@ -85,11 +79,8 @@ namespace csharp_example
                         continue;
                     }
                     CurrentStr = ListTr[j].FindElement(By.CssSelector("td:nth-child(3)")).Text;
-                    if (String.Compare(CurrentStr, TempStr) > 0)
-                    {
-                        Console.WriteLine("No alphabet geozones!");
-                        break;
-                    }
+                  Assert.True(String.Compare(CurrentStr, TempStr) <= 0);
+
                 }
             }
         }

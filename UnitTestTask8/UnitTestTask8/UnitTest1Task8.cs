@@ -30,12 +30,12 @@ namespace csharp_example
             wait.Until(ExpectedConditions.TitleIs("Online Store | My Store"));
 
             IWebElement Tab = wait.Until(ExpectedConditions.ElementExists(By.ClassName("middle")));
-            IList<IWebElement> ListImages = Tab.FindElements(By.ClassName("image-wrapper"));
+            IList<IWebElement> ListImages = Tab.FindElements(By.ClassName("product"));
             int size_ = ListImages.Count;
 
             for (int i = 0; i < size_; i++)
             {
-                Assert.IsTrue(ListImages[i].FindElements(By.ClassName("sticker")).Count > 0);               
+                Assert.IsTrue(ListImages[i].FindElements(By.ClassName("sticker")).Count == 1);               
             }
 
     

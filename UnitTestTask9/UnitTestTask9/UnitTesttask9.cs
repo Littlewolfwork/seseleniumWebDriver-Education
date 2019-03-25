@@ -98,7 +98,7 @@ namespace csharp_example
         [TearDown]
         public void stop()
         {
-            //driver.Quit();
+            driver.Quit();
 
             driver = null;
         }
